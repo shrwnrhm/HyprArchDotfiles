@@ -1,0 +1,9 @@
+# Ignore everything by default
+*
+
+# But include these directories and files explicitly
+!.config/
+!.config/hyprland/
+!.bashrc
+!.zshrc
+!.gitignore
