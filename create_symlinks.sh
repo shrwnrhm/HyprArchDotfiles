@@ -3,11 +3,15 @@
 # TODO: replace/check/improve this code
 
 # Define your dotfiles directory
-DOTFILES="$HOME/dotfiles"
+DOTFILES="$HOME/.dotfiles"
 
 # Example configs to link: (adjust as needed)
 declare -A configs=(
-    ["$HOME/.config/hypr/hyprland.conf"]="$DOTFILES/hyprland/.config/hypr/hyprland.conf"
+	["$HOME/.bashrc"]="$DOTFILES/.bashrc"
+	["$HOME/.zshrc"]="$DOTFILES/.zshrc"
+    ["$HOME/.config/waybar/config.jsonc"]="$DOTFILES/.config/waybar/config.jsonc"
+    ["$HOME/.config/hypr"]="$DOTFILES/.config/hypr"
+    ["$HOME/.config/kitty/kitty.conf"]="$DOTFILES/.config/kitty/kitty.conf"
     # Add other configs here in ["link_path"]="target_path" format
 )
 
