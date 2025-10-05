@@ -55,11 +55,11 @@ sudo pacman -S --needed --noconfirm \
 
 echo "Installing CPU dependant programs"
 if [[ "$cpu_type" == "intel" ]]; then
-    echo "Installing Intel Vulkan driver..."
-    sudo pacman -S --needed vulkan-intel
+    echo "Installing Intel CPU microcode updates..."
+    sudo pacman -S --needed intel-ucode
 elif [[ "$cpu_type" == "amd" ]]; then
-    echo "Installing AMD Vulkan driver..."
-    sudo pacman -S --needed vulkan-radeon
+    echo "Installing AMD CPU microcode updates..."
+    sudo pacman -S --needed amd-ucode
 if
 
 echo "Installing GPU dependant programs"
