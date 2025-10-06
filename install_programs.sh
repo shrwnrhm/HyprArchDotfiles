@@ -109,11 +109,11 @@ sudo pacman -S --needed --noconfirm \
 
 echo "Installing yay (AUR helper)..."
 if ! command -v yay &> /dev/null; then
-    cd /opt
-    git clone https://aur.archlinux.org/yay-bin.git
-    chown -R $(logname):$(logname) yay-bin
+    git clone https://aur.archlinux.org/yay-bin.git /tmp/yay-bin
+    chown -R $(logname):$(logname) /tmp/yay-bin
     cd yay-bin
-    sudo -u $(logname) makepkg -si --noconfirm
+    sudo -u $(logname) makepkg -C /tmp/yay-bin -si --noconfirm
+    sudo rm -rf /tmp/yay-bin
 fi
 
 echo "Enabling essential services..."
